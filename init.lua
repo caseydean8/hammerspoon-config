@@ -13,6 +13,12 @@ spoon.AppBindings:bind('Notes', {
   { { 'ctrl' }, 'l', {}, 'right' },
 })
 
+spoon.AppBindings:bind('Firefox Developer Edition', {
+  { { 'ctrl' }, 'j', {}, 'down' },
+  { { 'ctrl' }, 'k', {}, 'up' },
+  { { 'ctrl' }, 'h', {}, 'left' },
+  { { 'ctrl' }, 'l', {}, 'right' },
+})
 
 function reloadConfig(files)
   doReload = false
@@ -36,8 +42,6 @@ warpCmdWOff = hs.hotkey.new({ "cmd" }, "W", function()
   hs.alert.show("hit <space> w")
 end)
 
-
-
 local WarpWindowFilter = hs.window.filter.new("Warp")
 
 WarpWindowFilter
@@ -52,3 +56,23 @@ WarpWindowFilter
 function appId(app)
   return hs.application.infoforBundlePath(app)['CFBundleIdentifier']
 end
+
+function escapeKey()
+  hs.eventtap.keyStroke({}, 'escape')
+end
+
+-- local escapeMap = {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
