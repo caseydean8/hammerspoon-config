@@ -5,13 +5,23 @@ end)
 hs.loadSpoon("FnMate")
 hs.loadSpoon("AppBindings")
 
+function appBinder(app)
+  spoon.AppBindings:bind(app, {
+    { { 'ctrl' }, 'j', {}, 'down' },
+    { { 'ctrl' }, 'k', {}, 'up' },
+    { { 'ctrl' }, 'h', {}, 'left' },
+    { { 'ctrl' }, 'l', {}, 'right' },
+  })
+end
+
 -- bind keys in Notes app
-spoon.AppBindings:bind('Notes', {
-  { { 'ctrl' }, 'j', {}, 'down' },
-  { { 'ctrl' }, 'k', {}, 'up' },
-  { { 'ctrl' }, 'h', {}, 'left' },
-  { { 'ctrl' }, 'l', {}, 'right' },
-})
+appBinder('Notes')
+-- spoon.AppBindings:bind('Notes', {
+--   { { 'ctrl' }, 'j', {}, 'down' },
+--   { { 'ctrl' }, 'k', {}, 'up' },
+--   { { 'ctrl' }, 'h', {}, 'left' },
+--   { { 'ctrl' }, 'l', {}, 'right' },
+-- })
 
 spoon.AppBindings:bind('Firefox Developer Edition', {
   { { 'ctrl' }, 'j', {}, 'down' },
@@ -62,17 +72,3 @@ function escapeKey()
 end
 
 -- local escapeMap = {}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
