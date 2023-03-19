@@ -11,24 +11,32 @@ function appBinder(app)
     { { 'ctrl' }, 'k', {}, 'up' },
     { { 'ctrl' }, 'h', {}, 'left' },
     { { 'ctrl' }, 'l', {}, 'right' },
+    -- Go to end of line.
+    { { 'ctrl' }, ';', { 'cmd' }, 'right' },
   })
 end
 
 -- bind keys in Notes app
 appBinder('Notes')
--- spoon.AppBindings:bind('Notes', {
+appBinder('Anki')
+appBinder('Firefox Developer Edition')
+appBinder('TextEdit')
+appBinder('System Preferences')
+appBinder('Safari')
+appBinder('Visual Studio')
+appBinder('Azure Data Studio')
+appBinder('Preview')
+appBinder('AltTab')
+
+spoon.AppBindings:bind('Warp', {
+  { { 'cmd' }, 's', { 'space' }, 'w' },
+})
+-- spoon.AppBindings:bind('Firefox Developer Edition', {
 --   { { 'ctrl' }, 'j', {}, 'down' },
 --   { { 'ctrl' }, 'k', {}, 'up' },
 --   { { 'ctrl' }, 'h', {}, 'left' },
 --   { { 'ctrl' }, 'l', {}, 'right' },
 -- })
-
-spoon.AppBindings:bind('Firefox Developer Edition', {
-  { { 'ctrl' }, 'j', {}, 'down' },
-  { { 'ctrl' }, 'k', {}, 'up' },
-  { { 'ctrl' }, 'h', {}, 'left' },
-  { { 'ctrl' }, 'l', {}, 'right' },
-})
 
 function reloadConfig(files)
   doReload = false
