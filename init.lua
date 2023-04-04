@@ -27,16 +27,11 @@ appBinder('Visual Studio')
 appBinder('Azure Data Studio')
 appBinder('Preview')
 appBinder('AltTab')
+appBinder('MySQLWorkbench')
 
 spoon.AppBindings:bind('Warp', {
   { { 'cmd' }, 's', { 'space' }, 'w' },
 })
--- spoon.AppBindings:bind('Firefox Developer Edition', {
---   { { 'ctrl' }, 'j', {}, 'down' },
---   { { 'ctrl' }, 'k', {}, 'up' },
---   { { 'ctrl' }, 'h', {}, 'left' },
---   { { 'ctrl' }, 'l', {}, 'right' },
--- })
 
 function reloadConfig(files)
   doReload = false
