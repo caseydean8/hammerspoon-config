@@ -28,6 +28,7 @@ appBinder('Azure Data Studio')
 appBinder('Preview')
 appBinder('AltTab')
 appBinder('MySQLWorkbench')
+appBinder('Numbers')
 
 spoon.AppBindings:bind('Warp', {
   { { 'cmd' }, 's', { 'space' }, 'w' },
