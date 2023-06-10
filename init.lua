@@ -29,6 +29,9 @@ appBinder('Preview')
 appBinder('AltTab')
 appBinder('MySQLWorkbench')
 appBinder('Numbers')
+appBinder('Brave Browser')
+appBinder('Microsoft Edge')
+appBinder('Warp')
 
 spoon.AppBindings:bind('Warp', {
   { { 'cmd' }, 's', { 'space' }, 'w' },
