@@ -32,6 +32,7 @@ appBinder('Numbers')
 appBinder('Brave Browser')
 appBinder('Microsoft Edge')
 appBinder('Warp')
+appBinder('Google Chrome')
 
 spoon.AppBindings:bind('Warp', {
   { { 'cmd' }, 's', { 'space' }, 'w' },
