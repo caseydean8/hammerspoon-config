@@ -13,6 +13,7 @@ function appBinder(app)
     { { 'ctrl' }, 'l', {}, 'right' },
     -- Go to end of line.
     { { 'ctrl' }, ';', { 'cmd' }, 'right' },
+    { {'ctrl'}, [[']], {'cmd', 'shift'}, 'right'},
   })
 end
 
