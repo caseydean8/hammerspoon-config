@@ -1,7 +1,3 @@
-hs.hotkey.bind({ "cmd", "alt", "ctrl" }, "W", function()
-  hs.notify.new({ title = "Hammerspoon", informativeText = "Hello World" }):send()
-end)
-
 hs.loadSpoon("FnMate")
 hs.loadSpoon("AppBindings")
 
@@ -17,23 +13,13 @@ function appBinder(app)
   })
 end
 
--- bind keys in Notes app
-appBinder('Notes')
-appBinder('Anki')
-appBinder('Firefox Developer Edition')
-appBinder('TextEdit')
-appBinder('System Preferences')
-appBinder('Safari')
-appBinder('Visual Studio')
-appBinder('Azure Data Studio')
-appBinder('Preview')
-appBinder('AltTab')
-appBinder('MySQLWorkbench')
-appBinder('Numbers')
-appBinder('Brave Browser')
-appBinder('Microsoft Edge')
-appBinder('Warp')
-appBinder('Google Chrome')
+apps = {'Notes', 'Anki','Firefox Developer Edition', 'TextEdit', 'System Preferences', 'Safari', 'Visual Studio',
+ 'Azure Data Studio', 'Preview', 'AltTab', 'MySQLWorkbench', 'MySQLWorkbench', 'Numbers', 'Brave Browser', 'Microsoft Edge', 'Google Chrome',
+'Pages', 'Postman', 'App Store', 'LibreWolf'
+}
+for i, app in ipairs(apps) do
+  appBinder(app)
+end
 
 spoon.AppBindings:bind('Warp', {
   { { 'cmd' }, 's', { 'space' }, 'w' },
